@@ -1,0 +1,48 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-07-14T16:08:49.904+05:30  INFO 6748 --- [           main] org.example.Main                         : Starting Main v1.0-SNAPSHOT using Java 17.0.16 with PID 6748 (C:\Users\Venkat\Downloads\issue-tracker\Issue-tracker\target\Issue-tracker-1.0-SNAPSHOT.jar started by Venkat in C:\Users\Venkat\Downloads\issue-tracker\Issue-tracker)
+2026-07-14T16:08:49.913+05:30  INFO 6748 --- [           main] org.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2026-07-14T16:08:51.830+05:30  INFO 6748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14T16:08:52.306+05:30  INFO 6748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 452 ms. Found 1 JPA repository interface.
+2026-07-14T16:08:53.885+05:30  INFO 6748 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-14T16:08:53.930+05:30  INFO 6748 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-14T16:08:53.931+05:30  INFO 6748 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-14T16:08:54.044+05:30  INFO 6748 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-14T16:08:54.046+05:30  INFO 6748 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3956 ms
+2026-07-14T16:08:54.456+05:30  INFO 6748 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14T16:08:54.776+05:30  INFO 6748 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-14T16:08:54.884+05:30  INFO 6748 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-14T16:08:56.273+05:30  INFO 6748 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14T16:08:56.374+05:30  INFO 6748 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-14T16:08:57.447+05:30  INFO 6748 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5835e24a
+2026-07-14T16:08:57.454+05:30  INFO 6748 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-14T16:08:57.655+05:30  WARN 6748 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14T16:09:00.936+05:30  INFO 6748 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14T16:09:01.226+05:30  INFO 6748 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:09:03.315+05:30  WARN 6748 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14T16:09:04.187+05:30  INFO 6748 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-14T16:09:04.208+05:30  INFO 6748 --- [           main] org.example.Main                         : Started Main in 15.521 seconds (process running for 17.71)
+2026-07-14T16:09:04.669+05:30  INFO 6748 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14T16:09:04.670+05:30  INFO 6748 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-14T16:09:04.674+05:30  INFO 6748 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0 where ji1_0.project_key=?
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0 where ji1_0.id=?
+Hibernate: update jira_issues set assignee=?,issue_key=?,priority=?,project_key=?,status=?,summary=? where id=?
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0 where ji1_0.id=?
+Hibernate: update jira_issues set assignee=?,issue_key=?,priority=?,project_key=?,status=?,summary=? where id=?
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0 where ji1_0.id=?
+Hibernate: update jira_issues set assignee=?,issue_key=?,priority=?,project_key=?,status=?,summary=? where id=?
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0
+Hibernate: select ji1_0.id,ji1_0.assignee,ji1_0.issue_key,ji1_0.priority,ji1_0.project_key,ji1_0.status,ji1_0.summary from jira_issues ji1_0 where ji1_0.project_key=?
